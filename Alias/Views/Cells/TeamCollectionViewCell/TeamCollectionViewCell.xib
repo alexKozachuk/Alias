@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="TeamCollectionViewCell" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="TeamCollectionViewCell" id="zri-xs-OoE" customClass="TeamCollectionViewCell" customModule="Alias" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="133" height="155"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="iUR-ND-uSa">
+                <rect key="frame" x="0.0" y="0.0" width="133" height="155"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gaj-qZ-fid">
+                        <rect key="frame" x="10" y="10" width="113" height="135"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yow-DH-cSY">
+                                <rect key="frame" x="10" y="105" width="93" height="30"/>
+                                <state key="normal" title="Змінити">
+                                    <color key="titleColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="chu-pd-dRN">
+                                <rect key="frame" x="0.0" y="0.0" width="113" height="67.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dog1" translatesAutoresizingMaskIntoConstraints="NO" id="FOm-uN-5Zs">
+                                        <rect key="frame" x="33" y="10" width="47.5" height="47.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="FOm-uN-5Zs" secondAttribute="height" multiplier="1:1" id="DeL-aY-WvG"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="layer.shadowColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
+                                                <real key="value" value="0.80000000000000004"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
+                                                <size key="value" width="0.0" height="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.93252450229999995" green="0.53559809920000001" blue="0.57565814260000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="FOm-uN-5Zs" firstAttribute="centerX" secondItem="chu-pd-dRN" secondAttribute="centerX" id="0Gf-xP-xCu"/>
+                                    <constraint firstItem="FOm-uN-5Zs" firstAttribute="top" secondItem="chu-pd-dRN" secondAttribute="top" constant="10" id="0We-SA-fbJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="FOm-uN-5Zs" secondAttribute="bottom" constant="10" id="olP-U6-OtP"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="chu-pd-dRN" secondAttribute="trailing" id="Otx-CL-Lhn"/>
+                            <constraint firstItem="chu-pd-dRN" firstAttribute="height" secondItem="Gaj-qZ-fid" secondAttribute="height" multiplier="0.5" id="QQW-np-emE"/>
+                            <constraint firstAttribute="bottom" secondItem="yow-DH-cSY" secondAttribute="bottom" id="Zk3-A7-Ek3"/>
+                            <constraint firstItem="chu-pd-dRN" firstAttribute="top" secondItem="Gaj-qZ-fid" secondAttribute="top" id="kh5-vi-3y4"/>
+                            <constraint firstAttribute="trailing" secondItem="yow-DH-cSY" secondAttribute="trailing" constant="10" id="lTg-zL-7nr"/>
+                            <constraint firstItem="yow-DH-cSY" firstAttribute="leading" secondItem="Gaj-qZ-fid" secondAttribute="leading" constant="10" id="vlM-nY-PsI"/>
+                            <constraint firstItem="chu-pd-dRN" firstAttribute="leading" secondItem="Gaj-qZ-fid" secondAttribute="leading" id="yJk-ra-iuk"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Gaj-qZ-fid" firstAttribute="leading" secondItem="iUR-ND-uSa" secondAttribute="leading" constant="10" id="8xH-z2-UJk"/>
+                    <constraint firstAttribute="bottom" secondItem="Gaj-qZ-fid" secondAttribute="bottom" constant="10" id="GN5-pH-EiN"/>
+                    <constraint firstAttribute="trailing" secondItem="Gaj-qZ-fid" secondAttribute="trailing" constant="10" id="R5o-g7-JfB"/>
+                    <constraint firstItem="Gaj-qZ-fid" firstAttribute="top" secondItem="iUR-ND-uSa" secondAttribute="top" constant="10" id="l47-zr-yLC"/>
+                </constraints>
+                <userDefinedRuntimeAttributes>
+                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                        <integer key="value" value="20"/>
+                    </userDefinedRuntimeAttribute>
+                    <userDefinedRuntimeAttribute type="number" keyPath="layer.opacity">
+                        <real key="value" value="0.80000000000000004"/>
+                    </userDefinedRuntimeAttribute>
+                </userDefinedRuntimeAttributes>
+            </collectionViewCellContentView>
+            <size key="customSize" width="133" height="155"/>
+            <connections>
+                <outlet property="colorView" destination="chu-pd-dRN" id="wVz-sE-Gcd"/>
+                <outlet property="imageView" destination="FOm-uN-5Zs" id="QaB-f9-rGW"/>
+            </connections>
+            <point key="canvasLocation" x="176.08695652173915" y="143.63839285714286"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="dog1" width="256" height="236"/>
+    </resources>
+</document>
