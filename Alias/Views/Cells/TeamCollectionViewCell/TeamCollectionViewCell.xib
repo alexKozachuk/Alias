@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -20,7 +20,7 @@
                         <rect key="frame" x="10" y="10" width="113" height="135"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yow-DH-cSY">
-                                <rect key="frame" x="10" y="105" width="93" height="30"/>
+                                <rect key="frame" x="10" y="108" width="93" height="27"/>
                                 <state key="normal" title="Змінити">
                                     <color key="titleColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -56,16 +56,27 @@
                                     <constraint firstAttribute="bottom" secondItem="FOm-uN-5Zs" secondAttribute="bottom" constant="10" id="olP-U6-OtP"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вухаті спаніелі" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="D2M-a5-kUy">
+                                <rect key="frame" x="10" y="67.5" width="93" height="40.5"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="D2M-a5-kUy" firstAttribute="top" secondItem="chu-pd-dRN" secondAttribute="bottom" id="EV9-6a-gkh"/>
+                            <constraint firstItem="yow-DH-cSY" firstAttribute="top" secondItem="D2M-a5-kUy" secondAttribute="bottom" id="Nzi-9R-H8G"/>
                             <constraint firstAttribute="trailing" secondItem="chu-pd-dRN" secondAttribute="trailing" id="Otx-CL-Lhn"/>
                             <constraint firstItem="chu-pd-dRN" firstAttribute="height" secondItem="Gaj-qZ-fid" secondAttribute="height" multiplier="0.5" id="QQW-np-emE"/>
                             <constraint firstAttribute="bottom" secondItem="yow-DH-cSY" secondAttribute="bottom" id="Zk3-A7-Ek3"/>
+                            <constraint firstItem="D2M-a5-kUy" firstAttribute="leading" secondItem="Gaj-qZ-fid" secondAttribute="leading" constant="10" id="jwL-HR-5Hz"/>
                             <constraint firstItem="chu-pd-dRN" firstAttribute="top" secondItem="Gaj-qZ-fid" secondAttribute="top" id="kh5-vi-3y4"/>
                             <constraint firstAttribute="trailing" secondItem="yow-DH-cSY" secondAttribute="trailing" constant="10" id="lTg-zL-7nr"/>
+                            <constraint firstAttribute="trailing" secondItem="D2M-a5-kUy" secondAttribute="trailing" constant="10" id="o2A-yv-cWA"/>
                             <constraint firstItem="yow-DH-cSY" firstAttribute="leading" secondItem="Gaj-qZ-fid" secondAttribute="leading" constant="10" id="vlM-nY-PsI"/>
                             <constraint firstItem="chu-pd-dRN" firstAttribute="leading" secondItem="Gaj-qZ-fid" secondAttribute="leading" id="yJk-ra-iuk"/>
+                            <constraint firstItem="D2M-a5-kUy" firstAttribute="height" secondItem="yow-DH-cSY" secondAttribute="height" multiplier="1.5" id="zdF-ew-bVk"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -93,6 +104,7 @@
             <connections>
                 <outlet property="colorView" destination="chu-pd-dRN" id="wVz-sE-Gcd"/>
                 <outlet property="imageView" destination="FOm-uN-5Zs" id="QaB-f9-rGW"/>
+                <outlet property="nameLabel" destination="D2M-a5-kUy" id="nob-55-KOr"/>
             </connections>
             <point key="canvasLocation" x="176.08695652173915" y="143.63839285714286"/>
         </collectionViewCell>

@@ -19,6 +19,7 @@ class PauseMenuViewController: UIViewController {
     }
     
     @IBAction func continueButtonPressed(_ sender: Any?) {
+        delegate.resume()
         dismiss(animated: true, completion: nil)
     }
     

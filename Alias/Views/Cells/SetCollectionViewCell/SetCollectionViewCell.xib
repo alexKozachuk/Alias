@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="SetCollectionViewCell" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="SetCollectionViewCell" id="hvF-FB-ZbB" customClass="SetCollectionViewCell" customModule="Alias" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="158" height="134"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="nz2-gY-gcK">
+                <rect key="frame" x="0.0" y="0.0" width="158" height="134"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gRB-lU-lDb">
+                        <rect key="frame" x="10" y="10" width="138" height="114"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bookBackground" translatesAutoresizingMaskIntoConstraints="NO" id="PEn-ow-f8H">
+                                <rect key="frame" x="0.0" y="0.0" width="138" height="114"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" alpha="0.34999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m8X-1x-jza">
+                                <rect key="frame" x="0.0" y="0.0" width="138" height="114"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="7f4-hy-vF8">
+                                    <rect key="frame" x="0.0" y="0.0" width="138" height="114"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="dark"/>
+                            </visualEffectView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Базовий набір" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqS-3l-gcH">
+                                <rect key="frame" x="10" y="44.5" width="118" height="25.5"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Selected" translatesAutoresizingMaskIntoConstraints="NO" id="xd6-2x-062">
+                                <rect key="frame" x="110" y="8" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="xd6-2x-062" secondAttribute="height" multiplier="1:1" id="6M7-7u-iBF"/>
+                                    <constraint firstAttribute="height" constant="20" id="ggc-gM-gVp"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xd6-2x-062" firstAttribute="top" secondItem="gRB-lU-lDb" secondAttribute="top" constant="8" id="0T1-HT-l8y"/>
+                            <constraint firstAttribute="trailing" secondItem="m8X-1x-jza" secondAttribute="trailing" id="2CO-VD-5Rk"/>
+                            <constraint firstAttribute="trailing" secondItem="iqS-3l-gcH" secondAttribute="trailing" constant="10" id="6QS-J7-vs8"/>
+                            <constraint firstItem="iqS-3l-gcH" firstAttribute="centerY" secondItem="PEn-ow-f8H" secondAttribute="centerY" id="70V-Ab-FDM"/>
+                            <constraint firstItem="iqS-3l-gcH" firstAttribute="leading" secondItem="gRB-lU-lDb" secondAttribute="leading" constant="10" id="ANq-Wb-hF3"/>
+                            <constraint firstAttribute="trailing" secondItem="xd6-2x-062" secondAttribute="trailing" constant="8" id="CYn-c0-ixa"/>
+                            <constraint firstAttribute="bottom" secondItem="PEn-ow-f8H" secondAttribute="bottom" id="Hft-G0-ha3"/>
+                            <constraint firstItem="m8X-1x-jza" firstAttribute="top" secondItem="gRB-lU-lDb" secondAttribute="top" id="Odz-ha-X2z"/>
+                            <constraint firstItem="m8X-1x-jza" firstAttribute="leading" secondItem="gRB-lU-lDb" secondAttribute="leading" id="aWs-5n-aiA"/>
+                            <constraint firstItem="iqS-3l-gcH" firstAttribute="centerX" secondItem="PEn-ow-f8H" secondAttribute="centerX" id="apX-zO-GAj"/>
+                            <constraint firstItem="PEn-ow-f8H" firstAttribute="top" secondItem="gRB-lU-lDb" secondAttribute="top" id="bAL-en-rOL"/>
+                            <constraint firstAttribute="bottom" secondItem="m8X-1x-jza" secondAttribute="bottom" id="bLC-KQ-5Wc"/>
+                            <constraint firstAttribute="trailing" secondItem="PEn-ow-f8H" secondAttribute="trailing" id="prT-cp-Cwv"/>
+                            <constraint firstItem="PEn-ow-f8H" firstAttribute="leading" secondItem="gRB-lU-lDb" secondAttribute="leading" id="pst-8f-88H"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="gRB-lU-lDb" firstAttribute="leading" secondItem="nz2-gY-gcK" secondAttribute="leading" constant="10" id="WaN-CA-MBS"/>
+                    <constraint firstAttribute="trailing" secondItem="gRB-lU-lDb" secondAttribute="trailing" constant="10" id="aVx-31-O8A"/>
+                    <constraint firstItem="gRB-lU-lDb" firstAttribute="top" secondItem="nz2-gY-gcK" secondAttribute="top" constant="10" id="ci3-j2-Dmd"/>
+                    <constraint firstAttribute="bottom" secondItem="gRB-lU-lDb" secondAttribute="bottom" constant="10" id="joZ-PC-AbW"/>
+                </constraints>
+                <userDefinedRuntimeAttributes>
+                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                        <integer key="value" value="20"/>
+                    </userDefinedRuntimeAttribute>
+                    <userDefinedRuntimeAttribute type="number" keyPath="layer.opacity">
+                        <real key="value" value="0.80000000000000004"/>
+                    </userDefinedRuntimeAttribute>
+                </userDefinedRuntimeAttributes>
+            </collectionViewCellContentView>
+            <size key="customSize" width="158" height="134"/>
+            <connections>
+                <outlet property="backgroundImageView" destination="PEn-ow-f8H" id="CbE-iU-R4h"/>
+                <outlet property="nameLabel" destination="iqS-3l-gcH" id="gbg-um-rE0"/>
+                <outlet property="selectedImageView" destination="xd6-2x-062" id="3iZ-dD-7jg"/>
+            </connections>
+            <point key="canvasLocation" x="194.20289855072465" y="136.60714285714286"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Selected" width="165" height="165"/>
+        <image name="bookBackground" width="524" height="369"/>
+    </resources>
+</document>

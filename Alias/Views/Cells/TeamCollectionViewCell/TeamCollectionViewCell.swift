@@ -11,6 +11,7 @@ import UIKit
 class TeamCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var colorView: UIView!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
     
     override var isSelected: Bool {
         didSet {
@@ -19,8 +20,9 @@ class TeamCollectionViewCell: UICollectionViewCell {
     }
     
     func setup(team: Team) {
-        imageView.image = team.image
+        imageView.image = team.photo
         colorView.backgroundColor = team.color
+        nameLabel.text = team.name
         
         self.layer.shadowColor = UIColor.black.cgColor
         self.layer.shadowOpacity = 0.5

@@ -14,7 +14,8 @@ class TeamTableViewCell: UITableViewCell {
     @IBOutlet weak var pointCountLabel: UILabel!
     
     func setup(_ team: Team) {
-        teamImageView.image = team.image
+        teamImageView.image = team.photo
         teamNameLabel.text = team.name
+        pointCountLabel.text = String(team.points)
     }
 }

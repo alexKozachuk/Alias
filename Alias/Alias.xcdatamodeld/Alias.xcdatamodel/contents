@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19C57" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Card" representedClassName="Card" syncable="YES">
+        <attribute name="name" attributeType="String"/>
+        <relationship name="cardDeck" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="CardDeck" inverseName="cards" inverseEntity="CardDeck"/>
+    </entity>
+    <entity name="CardDeck" representedClassName="CardDeck" syncable="YES">
+        <attribute name="isActive" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="name" attributeType="String"/>
+        <attribute name="photo" optional="YES" attributeType="Transformable" valueTransformerName="" customClassName="UIImage"/>
+        <relationship name="cards" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Card" inverseName="cardDeck" inverseEntity="Card"/>
+    </entity>
+    <entity name="Team" representedClassName="Team" syncable="YES">
+        <attribute name="color" attributeType="Transformable" valueTransformerName="" customClassName="UIColor"/>
+        <attribute name="isActive" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="name" attributeType="String"/>
+        <attribute name="photo" attributeType="Transformable" valueTransformerName="" customClassName="UIImage"/>
+        <attribute name="points" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <elements>
+        <element name="Card" positionX="-54" positionY="9" width="128" height="73"/>
+        <element name="CardDeck" positionX="-63" positionY="-18" width="128" height="103"/>
+        <element name="Team" positionX="-36" positionY="18" width="128" height="118"/>
+    </elements>
+</model>

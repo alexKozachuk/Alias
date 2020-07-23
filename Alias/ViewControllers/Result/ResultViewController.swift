@@ -14,6 +14,7 @@ class ResultViewController: UIViewController {
                                 Answer(name: "Духовка", isAnswered: false),
                                 Answer(name: "Саня", isAnswered: true)]
     var delegate: CardGameDelegate!
+    var penalty: Bool = true
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -22,15 +23,26 @@ class ResultViewController: UIViewController {
         setupTableView()
     }
     
+    func setupDefaults() {
+        let defaults = UserDefaultsManager.share
+        penalty = defaults.getBool(key: .penalty)
+    }
+    
     func setupTableView() {
         tableView.register(type: ResultTableViewCell.self)
     }
     
     @IBAction func continueButtonPressed(_ sender: Any?) {
-        let count = dataSource.reduce(0) { $0 + ($1.isAnswered ? 1 : 0)}
+        var count = 0
+        if penalty {
+            count = dataSource.reduce(0) { $0 + ($1.isAnswered ? 1 : -1)}
+        } else {
+            count = dataSource.reduce(0) { $0 + ($1.isAnswered ? 1 : 0)}
+        }
+       
         print(count)
         navigationController?.popViewController(animated: false)
-        delegate?.popViewController(animated: true)
+        delegate?.popViewControllerWithCount(animated: true, count: count)
     }
 
 }
