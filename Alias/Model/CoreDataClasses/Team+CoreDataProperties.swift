@@ -2,7 +2,7 @@
 //  Team+CoreDataProperties.swift
 //  Alias
 //
-//  Created by Sasha on 21/07/2020.
+//  Created by Sasha on 23/07/2020.
 //  Copyright © 2020 Sasha. All rights reserved.
 //
 //
@@ -18,9 +18,9 @@ extension Team {
     }
 
     @NSManaged public var color: UIColor?
+    @NSManaged public var isActive: Bool
     @NSManaged public var name: String?
     @NSManaged public var photo: UIImage?
     @NSManaged public var points: Int16
-    @NSManaged public var isActive: Bool
 
 }

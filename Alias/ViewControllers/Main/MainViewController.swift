@@ -21,7 +21,7 @@ class MainViewController: UIViewController, MainView {
     
     var fetchedResultsController: NSFetchedResultsController<Team> = {
         let fetchRequest: NSFetchRequest<Team> = Team.fetchRequest()
-        let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
+        let sortDescriptor = NSSortDescriptor(key: "objectID", ascending: true)
         fetchRequest.sortDescriptors = [sortDescriptor]
         let fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: CoreDataManager.share.persistentContainer.viewContext, sectionNameKeyPath: nil, cacheName: nil)
         return fetchedResultsController
@@ -36,7 +36,7 @@ class MainViewController: UIViewController, MainView {
         } catch {
             print(error)
         }
-        fetchedResultsController.delegate = self
+        //fetchedResultsController.delegate = self
         setupSelection()
         navigationController?.navigationBar.isHidden = true
     }
@@ -116,6 +116,25 @@ extension MainViewController: UICollectionViewDelegate {
         }
     }
     
+    
+    func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
+        guard let cell = collectionView.cellForItem(at: indexPath) as? TeamCollectionViewCell else { return }
+        
+        UIView.animate(withDuration: 0.1, delay: 0, options: .allowAnimatedContent, animations: {
+            let transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
+            cell.contentView.transform = transform
+        })
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
+        guard let cell = collectionView.cellForItem(at: indexPath) as? TeamCollectionViewCell else { return }
+        
+        UIView.animate(withDuration: 0.1, delay: 0.1, options: .curveEaseIn, animations: {
+            cell.contentView.transform = .identity
+        })
+        
+    }
+    
 }
 
 extension MainViewController: UICollectionViewDataSource {
@@ -130,8 +149,12 @@ extension MainViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let item = fetchedResultsController.object(at: indexPath)
         let cell = collectionView.dequeueReusableCell(with: TeamCollectionViewCell.self, for: indexPath)
-        cell.setup(team: item)
+        cell.setup(team: item, delegate: self)
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, canFocusItemAt indexPath: IndexPath) -> Bool {
+        true
     }
     
     
@@ -160,60 +183,86 @@ extension MainViewController: UICollectionViewDelegateFlowLayout {
     
 }
 
-extension MainViewController: NSFetchedResultsControllerDelegate {
-    func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-        blockOperations.removeAll(keepingCapacity: false)
-    }
+//extension MainViewController: NSFetchedResultsControllerDelegate {
+//    func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+//        blockOperations.removeAll(keepingCapacity: false)
+//    }
+//
+//    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+//        switch type {
+//        case .insert:
+//            if let indexPath = newIndexPath {
+//                let blockOperation =  BlockOperation(block: { [weak self] in
+//                    self?.collectionView.insertItems(at: [indexPath])
+//                })
+//                blockOperations.append(blockOperation)
+//            }
+//        case .update:
+//            if let indexPath = indexPath {
+//                let blockOperation =  BlockOperation(block: { [weak self] in
+//                    guard let cardDesk = self?.fetchedResultsController.object(at: indexPath)
+//                        else { return }
+//                    guard let cell = self?.collectionView.dequeueReusableCell(with: TeamCollectionViewCell.self, for: indexPath) else { return }
+//                    cell.colorView.backgroundColor = cardDesk.color
+//                    cell.imageView.image = cardDesk.photo
+//                })
+//                blockOperations.append(blockOperation)
+//            }
+//        case .move:
+//            let blockOperation =  BlockOperation(block: { [weak self] in
+//                if let indexPath = indexPath {
+//                    self?.collectionView.deleteItems(at: [indexPath])
+//                }
+//                if let newIndexPath = newIndexPath {
+//                    self?.collectionView.insertItems(at: [newIndexPath])
+//                }
+//            })
+//            blockOperations.append(blockOperation)
+//        case .delete:
+//            let blockOperation =  BlockOperation(block: { [weak self] in
+//                if let indexPath = indexPath {
+//                    self?.collectionView.deleteItems(at: [indexPath])
+//                }
+//            })
+//            blockOperations.append(blockOperation)
+//        @unknown default:
+//            fatalError()
+//        }
+//    }
+//
+//    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+//        collectionView!.performBatchUpdates({ () -> Void in
+//            for operation: BlockOperation in self.blockOperations {
+//                operation.start()
+//            }
+//        }, completion: { (finished) -> Void in
+//            self.blockOperations.removeAll(keepingCapacity: false)
+//        })
+//    }
+//}
 
-    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
-        switch type {
-        case .insert:
-            if let indexPath = newIndexPath {
-                let blockOperation =  BlockOperation(block: { [weak self] in
-                    self?.collectionView.insertItems(at: [indexPath])
-                })
-                blockOperations.append(blockOperation)
-            }
-        case .update:
-            if let indexPath = indexPath {
-                let blockOperation =  BlockOperation(block: { [weak self] in
-                    guard let cardDesk = self?.fetchedResultsController.object(at: indexPath)
-                        else { return }
-                    guard let cell = self?.collectionView.dequeueReusableCell(with: TeamCollectionViewCell.self, for: indexPath) else { return }
-                    cell.colorView.backgroundColor = cardDesk.color
-                    cell.imageView.image = cardDesk.photo
-                })
-                blockOperations.append(blockOperation)
-            }
-        case .move:
-            let blockOperation =  BlockOperation(block: { [weak self] in
-                if let indexPath = indexPath {
-                    self?.collectionView.deleteItems(at: [indexPath])
-                }
-                if let newIndexPath = newIndexPath {
-                    self?.collectionView.insertItems(at: [newIndexPath])
-                }
-            })
-            blockOperations.append(blockOperation)
-        case .delete:
-            let blockOperation =  BlockOperation(block: { [weak self] in
-                if let indexPath = indexPath {
-                    self?.collectionView.deleteItems(at: [indexPath])
-                }
-            })
-            blockOperations.append(blockOperation)
-        @unknown default:
-            fatalError()
+extension MainViewController: TeamCollectionViewCellDelegate {
+    
+    func editButtonTapped(team: Team) {
+        let vc = EditTeamViewController.instantiate(from: .main)
+        vc.modalPresentationStyle = .overCurrentContext
+        vc.modalTransitionStyle = .crossDissolve
+        vc.setup(team: team, delegate: self)
+        self.present(vc, animated: true, completion: nil)
+    }
+    
+}
+
+extension MainViewController: EditTeamViewControllerDelegate {
+    
+    func didSave() {
+        collectionView.reloadData()
+        guard let items = fetchedResultsController.fetchedObjects else { return }
+        
+        for item in items where item.isActive == true {
+            let indexPath = fetchedResultsController.indexPath(forObject: item)
+            collectionView.selectItem(at: indexPath, animated: false, scrollPosition: .top)
         }
     }
     
-    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-        collectionView!.performBatchUpdates({ () -> Void in
-            for operation: BlockOperation in self.blockOperations {
-                operation.start()
-            }
-        }, completion: { (finished) -> Void in
-            self.blockOperations.removeAll(keepingCapacity: false)
-        })
-    }
 }

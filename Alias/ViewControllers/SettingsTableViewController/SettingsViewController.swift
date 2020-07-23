@@ -14,6 +14,7 @@ class SettingsTableViewController: UITableViewController {
     @IBOutlet weak var timeSegmentControl: UISegmentedControl!
     @IBOutlet weak var penaltySwitch: UISwitch!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         prepareSettings()
@@ -39,6 +40,17 @@ class SettingsTableViewController: UITableViewController {
         }
         let isOn = penaltySwitch.isOn
         defaults.setBool(item: isOn, key: .penalty)
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.row {
+        case 0:
+            let vc = RuleViewController.instantiate(from: .main)
+            navigationController?.pushViewController(vc, animated: true)
+        default:
+            break
+        }
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
 }

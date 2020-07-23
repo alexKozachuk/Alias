@@ -19,7 +19,7 @@ public class CardDeck: NSManagedObject {
     @nonobjc public class func getSelectedCardDeck() -> NSFetchRequest<CardDeck> {
         let fetchRequest: NSFetchRequest<CardDeck> = self.fetchRequest()
         
-        let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
+        let sortDescriptor = NSSortDescriptor(key: "objectID", ascending: true)
         fetchRequest.sortDescriptors = [sortDescriptor]
         
         let predicate = NSPredicate(format: "isActive == true")

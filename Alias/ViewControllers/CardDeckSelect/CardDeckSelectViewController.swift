@@ -17,7 +17,7 @@ class CardDeckSelectViewController: UIViewController {
     
     var fetchedResultsController: NSFetchedResultsController<CardDeck> = {
         let fetchRequest: NSFetchRequest<CardDeck> = CardDeck.fetchRequest()
-        let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
+        let sortDescriptor = NSSortDescriptor(key: "objectID", ascending: true)
         fetchRequest.sortDescriptors = [sortDescriptor]
         let fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: CoreDataManager.share.persistentContainer.viewContext, sectionNameKeyPath: nil, cacheName: nil)
         return fetchedResultsController

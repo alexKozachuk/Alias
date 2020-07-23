@@ -9,9 +9,6 @@
 /* Begin PBXBuildFile section */
 		D9252C0624C6B490000D258D /* TestDBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9252C0524C6B490000D258D /* TestDBViewController.swift */; };
 		D9252C1A24C7181A000D258D /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9252C1924C7181A000D258D /* Answer.swift */; };
-		D9252C1E24C7230A000D258D /* CardDeck+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9252C1B24C7230A000D258D /* CardDeck+CoreDataProperties.swift */; };
-		D9252C1F24C7230A000D258D /* Team+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9252C1C24C7230A000D258D /* Team+CoreDataProperties.swift */; };
-		D9252C2024C7230A000D258D /* Card+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9252C1D24C7230A000D258D /* Card+CoreDataProperties.swift */; };
 		D93A4ACF24C1ADCC00EA84FF /* TeamStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93A4ACE24C1ADCC00EA84FF /* TeamStorage.swift */; };
 		D93A4AD324C1E98A00EA84FF /* TeamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93A4AD224C1E98A00EA84FF /* TeamTableViewCell.swift */; };
 		D93A4AD524C1E99D00EA84FF /* TeamTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D93A4AD424C1E99D00EA84FF /* TeamTableViewCell.xib */; };
@@ -20,6 +17,11 @@
 		D93C099D24C8222300432DB1 /* SettingsContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93C099C24C8222300432DB1 /* SettingsContainerViewController.swift */; };
 		D93C099F24C8533700432DB1 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93C099E24C8533700432DB1 /* UserDefaultsManager.swift */; };
 		D93C09A224C85D3F00432DB1 /* PreloadedData.plist in Resources */ = {isa = PBXBuildFile; fileRef = D93C09A124C85D3F00432DB1 /* PreloadedData.plist */; };
+		D93C09A424C99A8D00432DB1 /* ΕditTeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93C09A324C99A8D00432DB1 /* ΕditTeamViewController.swift */; };
+		D93C09AF24C9B0CA00432DB1 /* Team+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93C09AC24C9B0CA00432DB1 /* Team+CoreDataProperties.swift */; };
+		D93C09B024C9B0CA00432DB1 /* CardDeck+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93C09AD24C9B0CA00432DB1 /* CardDeck+CoreDataProperties.swift */; };
+		D93C09B124C9B0CA00432DB1 /* Card+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93C09AE24C9B0CA00432DB1 /* Card+CoreDataProperties.swift */; };
+		D93C09B324C9B96700432DB1 /* RuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93C09B224C9B96700432DB1 /* RuleViewController.swift */; };
 		D94DBE1224C41AB600C2AE25 /* PauseMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94DBE1124C41AB600C2AE25 /* PauseMenuViewController.swift */; };
 		D94DBE1524C422F500C2AE25 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94DBE1424C422F500C2AE25 /* CardView.swift */; };
 		D94DBE1924C42B9900C2AE25 /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94DBE1824C42B9900C2AE25 /* ResultTableViewCell.swift */; };
@@ -51,9 +53,6 @@
 /* Begin PBXFileReference section */
 		D9252C0524C6B490000D258D /* TestDBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDBViewController.swift; sourceTree = "<group>"; };
 		D9252C1924C7181A000D258D /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
-		D9252C1B24C7230A000D258D /* CardDeck+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CardDeck+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		D9252C1C24C7230A000D258D /* Team+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Team+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		D9252C1D24C7230A000D258D /* Card+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Card+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		D93A4ACE24C1ADCC00EA84FF /* TeamStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamStorage.swift; sourceTree = "<group>"; };
 		D93A4AD224C1E98A00EA84FF /* TeamTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTableViewCell.swift; sourceTree = "<group>"; };
 		D93A4AD424C1E99D00EA84FF /* TeamTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamTableViewCell.xib; sourceTree = "<group>"; };
@@ -62,6 +61,11 @@
 		D93C099C24C8222300432DB1 /* SettingsContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsContainerViewController.swift; sourceTree = "<group>"; };
 		D93C099E24C8533700432DB1 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		D93C09A124C85D3F00432DB1 /* PreloadedData.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PreloadedData.plist; sourceTree = "<group>"; };
+		D93C09A324C99A8D00432DB1 /* ΕditTeamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ΕditTeamViewController.swift"; sourceTree = "<group>"; };
+		D93C09AC24C9B0CA00432DB1 /* Team+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Team+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D93C09AD24C9B0CA00432DB1 /* CardDeck+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CardDeck+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D93C09AE24C9B0CA00432DB1 /* Card+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Card+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D93C09B224C9B96700432DB1 /* RuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleViewController.swift; sourceTree = "<group>"; };
 		D94DBE1124C41AB600C2AE25 /* PauseMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseMenuViewController.swift; sourceTree = "<group>"; };
 		D94DBE1424C422F500C2AE25 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		D94DBE1824C42B9900C2AE25 /* ResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
@@ -161,6 +165,14 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
+		D93C09A524C99A9200432DB1 /* EditTeamViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D93C09A324C99A8D00432DB1 /* ΕditTeamViewController.swift */,
+			);
+			path = EditTeamViewController;
+			sourceTree = "<group>";
+		};
 		D94DBE1324C41ABC00C2AE25 /* PauseMenu */ = {
 			isa = PBXGroup;
 			children = (
@@ -200,9 +212,9 @@
 		D973DB9424C56D1300C54272 /* CoreDataClasses */ = {
 			isa = PBXGroup;
 			children = (
-				D9252C1B24C7230A000D258D /* CardDeck+CoreDataProperties.swift */,
-				D9252C1C24C7230A000D258D /* Team+CoreDataProperties.swift */,
-				D9252C1D24C7230A000D258D /* Card+CoreDataProperties.swift */,
+				D93C09AC24C9B0CA00432DB1 /* Team+CoreDataProperties.swift */,
+				D93C09AD24C9B0CA00432DB1 /* CardDeck+CoreDataProperties.swift */,
+				D93C09AE24C9B0CA00432DB1 /* Card+CoreDataProperties.swift */,
 				D97C912A24C5772A001302B8 /* CardDeck+CoreDataClass.swift */,
 				D97C912624C5772A001302B8 /* Card+CoreDataClass.swift */,
 				D97C912824C5772A001302B8 /* Team+CoreDataClass.swift */,
@@ -292,6 +304,7 @@
 		D9FF16BC24B5C84200CAE4DC /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				D93C09A524C99A9200432DB1 /* EditTeamViewController */,
 				D93C099924C821D800432DB1 /* SettingsTableViewController */,
 				D93C099824C821C500432DB1 /* SettingsContainerViewController */,
 				D9252C0424C6B47A000D258D /* TestDBViewController */,
@@ -301,6 +314,7 @@
 				D99F383824C33E3500A41F35 /* GameGard */,
 				D93A4AD624C1EC6400EA84FF /* GameHub */,
 				D9FF16BD24B5C87500CAE4DC /* Main */,
+				D93C09B224C9B96700432DB1 /* RuleViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -424,30 +438,32 @@
 				D9252C0624C6B490000D258D /* TestDBViewController.swift in Sources */,
 				D9252C1A24C7181A000D258D /* Answer.swift in Sources */,
 				D9FF16C124B5C8D700CAE4DC /* MainPresenter.swift in Sources */,
-				D9252C1F24C7230A000D258D /* Team+CoreDataProperties.swift in Sources */,
 				D9FF16AA24B5B63600CAE4DC /* MainViewController.swift in Sources */,
-				D9252C2024C7230A000D258D /* Card+CoreDataProperties.swift in Sources */,
 				D9FF16C424B5D20C00CAE4DC /* TeamCollectionViewCell.swift in Sources */,
 				D94DBE1524C422F500C2AE25 /* CardView.swift in Sources */,
 				D94DBE1224C41AB600C2AE25 /* PauseMenuViewController.swift in Sources */,
 				D97C912E24C5772A001302B8 /* Team+CoreDataClass.swift in Sources */,
+				D93C09B324C9B96700432DB1 /* RuleViewController.swift in Sources */,
 				D94DBE1924C42B9900C2AE25 /* ResultTableViewCell.swift in Sources */,
 				D9FF16C724B5D3C500CAE4DC /* Storyboard.swift in Sources */,
 				D97C913424C588C9001302B8 /* SetCollectionViewCell.swift in Sources */,
 				D94DBE1B24C42C3200C2AE25 /* ResultViewController.swift in Sources */,
+				D93C09A424C99A8D00432DB1 /* ΕditTeamViewController.swift in Sources */,
 				D9FF16CA24B5D53300CAE4DC /* Extension+Core.swift in Sources */,
+				D93C09B124C9B0CA00432DB1 /* Card+CoreDataProperties.swift in Sources */,
 				D93A4AD824C1EC8F00EA84FF /* GameHubViewController.swift in Sources */,
 				D99F383724C33E2F00A41F35 /* CardGameViewController.swift in Sources */,
+				D93C09B024C9B0CA00432DB1 /* CardDeck+CoreDataProperties.swift in Sources */,
 				D93A4ACF24C1ADCC00EA84FF /* TeamStorage.swift in Sources */,
 				D97C913924C58EDE001302B8 /* CardDeckSelectViewController.swift in Sources */,
 				D9FF16BF24B5C8A100CAE4DC /* MainProtocols.swift in Sources */,
+				D93C09AF24C9B0CA00432DB1 /* Team+CoreDataProperties.swift in Sources */,
 				D9FF16A624B5B63600CAE4DC /* AppDelegate.swift in Sources */,
 				D973DB9724C56D8300C54272 /* CoreDataManager.swift in Sources */,
 				D93C099B24C8220C00432DB1 /* SettingsViewController.swift in Sources */,
 				D97C913024C5772A001302B8 /* CardDeck+CoreDataClass.swift in Sources */,
 				D93C099F24C8533700432DB1 /* UserDefaultsManager.swift in Sources */,
 				D9FF16A824B5B63600CAE4DC /* SceneDelegate.swift in Sources */,
-				D9252C1E24C7230A000D258D /* CardDeck+CoreDataProperties.swift in Sources */,
 				D93A4AD324C1E98A00EA84FF /* TeamTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

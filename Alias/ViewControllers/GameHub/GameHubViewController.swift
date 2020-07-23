@@ -19,7 +19,7 @@ class GameHubViewController: UIViewController {
     var countTeam: Int = 0
     var fetchedResultsController: NSFetchedResultsController<Team> = {
         let fetchRequest: NSFetchRequest<Team> = Team.fetchRequest()
-        let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
+        let sortDescriptor = NSSortDescriptor(key: "objectID", ascending: true)
         fetchRequest.sortDescriptors = [sortDescriptor]
         let predicate = NSPredicate(format: "isActive == true")
         fetchRequest.predicate = predicate

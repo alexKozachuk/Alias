@@ -2,7 +2,7 @@
 //  Card+CoreDataProperties.swift
 //  Alias
 //
-//  Created by Sasha on 21/07/2020.
+//  Created by Sasha on 23/07/2020.
 //  Copyright © 2020 Sasha. All rights reserved.
 //
 //
