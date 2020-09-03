@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Fbm-Ab-hCF">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U88-dc-R3B">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="0p0-2B-lv6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tDn-c7-7Xy">
+                                <rect key="frame" x="20" y="150" width="374" height="224"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dog2" translatesAutoresizingMaskIntoConstraints="NO" id="cTv-ZO-HXT">
+                                        <rect key="frame" x="162" y="-25" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="cTv-ZO-HXT" secondAttribute="height" multiplier="1:1" id="GMh-Ya-Xtd"/>
+                                            <constraint firstAttribute="width" constant="50" id="ivG-Xj-4AJ"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Редагування команди" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WAg-g7-qIa">
+                                        <rect key="frame" x="10" y="33" width="354" height="31.5"/>
+                                        <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="22"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="yez-95-ea4">
+                                        <rect key="frame" x="10" y="74.5" width="354" height="139.5"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Дикі гієни" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S1K-de-IUd">
+                                                <rect key="frame" x="0.0" y="0.0" width="354" height="66"/>
+                                                <color key="textColor" red="0.93333333330000001" green="0.53725490200000003" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="22"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Pox-sW-clY">
+                                                <rect key="frame" x="0.0" y="74" width="354" height="65.5"/>
+                                                <subviews>
+                                                    <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sOs-Je-0xS">
+                                                        <rect key="frame" x="0.0" y="0.0" width="173" height="65.5"/>
+                                                        <color key="backgroundColor" systemColor="systemGray4Color" red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="21"/>
+                                                        <state key="normal" title="Відміна">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wg2-0Y-OZj">
+                                                        <rect key="frame" x="181" y="0.0" width="173" height="65.5"/>
+                                                        <color key="backgroundColor" red="0.50980392159999999" green="0.90196078430000004" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="21"/>
+                                                        <state key="normal" title="Готово">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="WAg-g7-qIa" firstAttribute="top" secondItem="cTv-ZO-HXT" secondAttribute="bottom" constant="8" id="6E0-6X-fg1"/>
+                                    <constraint firstItem="WAg-g7-qIa" firstAttribute="leading" secondItem="tDn-c7-7Xy" secondAttribute="leading" constant="10" id="Cnx-V4-iQy"/>
+                                    <constraint firstItem="cTv-ZO-HXT" firstAttribute="top" secondItem="tDn-c7-7Xy" secondAttribute="top" constant="-25" id="Mun-mK-KDS"/>
+                                    <constraint firstItem="yez-95-ea4" firstAttribute="leading" secondItem="tDn-c7-7Xy" secondAttribute="leading" constant="10" id="NMy-KO-dOt"/>
+                                    <constraint firstItem="yez-95-ea4" firstAttribute="top" secondItem="WAg-g7-qIa" secondAttribute="bottom" constant="10" id="Oe8-WK-Jdc"/>
+                                    <constraint firstItem="cTv-ZO-HXT" firstAttribute="centerX" secondItem="tDn-c7-7Xy" secondAttribute="centerX" id="Ta9-6D-nZF"/>
+                                    <constraint firstAttribute="bottom" secondItem="yez-95-ea4" secondAttribute="bottom" constant="10" id="X2R-bk-2Pd"/>
+                                    <constraint firstAttribute="trailing" secondItem="yez-95-ea4" secondAttribute="trailing" constant="10" id="kcc-Ad-wUP"/>
+                                    <constraint firstAttribute="trailing" secondItem="WAg-g7-qIa" secondAttribute="trailing" constant="10" id="uqb-Gu-Mb2"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="tDn-c7-7Xy" firstAttribute="leading" secondItem="0p0-2B-lv6" secondAttribute="leading" constant="20" id="1MN-AS-Wbv"/>
+                            <constraint firstAttribute="trailing" secondItem="tDn-c7-7Xy" secondAttribute="trailing" constant="20" id="QdM-Se-ZaD"/>
+                            <constraint firstItem="tDn-c7-7Xy" firstAttribute="centerX" secondItem="0p0-2B-lv6" secondAttribute="centerX" id="RVh-9A-lcq"/>
+                            <constraint firstItem="tDn-c7-7Xy" firstAttribute="top" secondItem="0p0-2B-lv6" secondAttribute="top" constant="150" id="ptz-hG-Rpf"/>
+                            <constraint firstItem="tDn-c7-7Xy" firstAttribute="height" secondItem="0p0-2B-lv6" secondAttribute="height" multiplier="0.25" id="yXi-Zh-eCz"/>
+                        </constraints>
+                    </view>
+                    <blurEffect style="regular"/>
+                </visualEffectView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="U88-dc-R3B" firstAttribute="leading" secondItem="Fbm-Ab-hCF" secondAttribute="leading" id="Mq0-cc-XQ5"/>
+                <constraint firstItem="U88-dc-R3B" firstAttribute="top" secondItem="Fbm-Ab-hCF" secondAttribute="top" id="U8w-TM-2hD"/>
+                <constraint firstAttribute="bottom" secondItem="U88-dc-R3B" secondAttribute="bottom" id="WjX-s7-H8g"/>
+                <constraint firstAttribute="trailing" secondItem="U88-dc-R3B" secondAttribute="trailing" id="Yaa-Mw-74E"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="MNe-SW-eaB"/>
+            <point key="canvasLocation" x="139" y="142"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="dog2" width="229" height="256"/>
+    </resources>
+</document>

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CardGameViewController" customModule="Alias" customModuleProvider="target">
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="color" keyPath="rightAnswerColor">
+                    <color key="value" red="0.50980392159999999" green="0.90196078430000004" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="color" keyPath="wrongAnswerColor">
+                    <color key="value" red="0.93333333330000001" green="0.53725490200000003" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="color" keyPath="defaultColor">
+                    <color key="value" red="1" green="1" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="cardView" destination="zQ9-PG-hr1" id="DNp-9U-Fp4"/>
+                <outlet property="currentCountLabel" destination="2ra-Za-GO2" id="OVd-c8-XFZ"/>
+                <outlet property="maxCountLabel" destination="CjE-2p-Miw" id="lwd-Qt-XUF"/>
+                <outlet property="timeLabel" destination="o5I-vJ-Ufj" id="84W-9M-3y4"/>
+                <outlet property="view" destination="aE3-SN-rmN" id="DEW-xw-g2k"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="aE3-SN-rmN">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="7MJ-XG-W1L">
+                    <rect key="frame" x="20" y="792" width="374" height="50"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rPN-8o-gXw">
+                            <rect key="frame" x="0.0" y="0.0" width="172.5" height="50"/>
+                            <color key="backgroundColor" red="0.50989414190000004" green="0.90195900200000001" blue="0.81268352269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="we4-iL-U7F"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="27"/>
+                            <state key="normal" title="-">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="minusButtonTapped" destination="-1" eventType="touchUpInside" id="nk9-jo-dWP"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bbn-Hd-2Qy">
+                            <rect key="frame" x="201.5" y="0.0" width="172.5" height="50"/>
+                            <color key="backgroundColor" red="0.50989414190000004" green="0.90195900200000001" blue="0.81268352269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="Xfn-4c-Iif"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="27"/>
+                            <state key="normal" title="+">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="plusButtonTapped" destination="-1" eventType="touchUpInside" id="NTW-cn-7J1"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o5I-vJ-Ufj">
+                    <rect key="frame" x="194.5" y="64" width="25" height="28.5"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="28.5" id="DY4-uc-v2S"/>
+                        <constraint firstAttribute="width" constant="25" id="OEZ-ng-NE3"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="20"/>
+                    <color key="textColor" red="0.93252450229999995" green="0.53559809920000001" blue="0.57565814260000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zQ9-PG-hr1" customClass="CardView" customModule="Alias" customModuleProvider="target">
+                    <rect key="frame" x="60" y="276.5" width="294" height="353"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Натисніть &quot;+&quot; Для початку гри" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H5h-bp-HRH">
+                            <rect key="frame" x="20" y="144" width="254" height="65.5"/>
+                            <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="23"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="zQ9-PG-hr1" secondAttribute="height" multiplier="10:12" id="0q6-Su-Mkr"/>
+                        <constraint firstItem="H5h-bp-HRH" firstAttribute="leading" secondItem="zQ9-PG-hr1" secondAttribute="leading" constant="20" id="4OH-M9-5LD"/>
+                        <constraint firstItem="H5h-bp-HRH" firstAttribute="centerY" secondItem="zQ9-PG-hr1" secondAttribute="centerY" id="4mN-L1-WJZ"/>
+                        <constraint firstItem="H5h-bp-HRH" firstAttribute="centerX" secondItem="zQ9-PG-hr1" secondAttribute="centerX" id="VcM-2E-vPx"/>
+                        <constraint firstAttribute="trailing" secondItem="H5h-bp-HRH" secondAttribute="trailing" constant="20" id="gbQ-It-9i2"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="layer.shadowUIColor">
+                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
+                            <real key="value" value="0.5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
+                            <size key="value" width="0.0" height="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="nameLabel" destination="H5h-bp-HRH" id="S3O-LX-Av8"/>
+                    </connections>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K2Q-zz-yvf">
+                    <rect key="frame" x="20" y="54" width="164.5" height="50"/>
+                    <state key="normal" image="Pause"/>
+                    <connections>
+                        <action selector="pauseButtonTapped:" destination="-1" eventType="touchUpInside" id="cSl-N6-8gD"/>
+                    </connections>
+                </button>
+                <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="GW1-a4-8gI">
+                    <rect key="frame" x="335" y="54" width="59" height="42.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ra-Za-GO2">
+                            <rect key="frame" x="0.0" y="0.0" width="18.5" height="42.5"/>
+                            <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="30"/>
+                            <color key="textColor" red="0.93252450229999995" green="0.53559809920000001" blue="0.57565814260000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/25" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CjE-2p-Miw">
+                            <rect key="frame" x="18.5" y="8.5" width="40.5" height="34"/>
+                            <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="24"/>
+                            <color key="textColor" red="0.93252450229999995" green="0.53559809920000001" blue="0.57565814260000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="0.86266356710000003" green="0.92898136379999996" blue="0.75560361149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="K2Q-zz-yvf" firstAttribute="leading" secondItem="tFX-TW-zAc" secondAttribute="leading" constant="20" id="J5c-ug-CiP"/>
+                <constraint firstItem="o5I-vJ-Ufj" firstAttribute="centerX" secondItem="tFX-TW-zAc" secondAttribute="centerX" id="NRu-EC-BHu"/>
+                <constraint firstItem="tFX-TW-zAc" firstAttribute="trailing" secondItem="GW1-a4-8gI" secondAttribute="trailing" constant="20" id="OgB-eE-WGn"/>
+                <constraint firstItem="tFX-TW-zAc" firstAttribute="bottom" secondItem="7MJ-XG-W1L" secondAttribute="bottom" constant="20" id="QZs-qz-dBM"/>
+                <constraint firstItem="tFX-TW-zAc" firstAttribute="trailing" secondItem="7MJ-XG-W1L" secondAttribute="trailing" constant="20" id="RDD-PS-hi4"/>
+                <constraint firstItem="o5I-vJ-Ufj" firstAttribute="top" secondItem="tFX-TW-zAc" secondAttribute="top" constant="20" id="VPt-WD-2q5"/>
+                <constraint firstItem="GW1-a4-8gI" firstAttribute="top" secondItem="tFX-TW-zAc" secondAttribute="top" constant="10" id="Wcj-yJ-rcn"/>
+                <constraint firstItem="7MJ-XG-W1L" firstAttribute="leading" secondItem="tFX-TW-zAc" secondAttribute="leading" constant="20" id="ZdH-71-cgX"/>
+                <constraint firstItem="K2Q-zz-yvf" firstAttribute="top" secondItem="tFX-TW-zAc" secondAttribute="top" constant="10" id="f4J-dh-WRG"/>
+                <constraint firstItem="zQ9-PG-hr1" firstAttribute="centerY" secondItem="tFX-TW-zAc" secondAttribute="centerY" id="kke-QD-2uv"/>
+                <constraint firstItem="o5I-vJ-Ufj" firstAttribute="leading" secondItem="K2Q-zz-yvf" secondAttribute="trailing" constant="10" id="lmA-bC-Umt"/>
+                <constraint firstItem="zQ9-PG-hr1" firstAttribute="centerX" secondItem="tFX-TW-zAc" secondAttribute="centerX" id="pTG-L4-0Kr"/>
+                <constraint firstItem="tFX-TW-zAc" firstAttribute="trailing" secondItem="zQ9-PG-hr1" secondAttribute="trailing" constant="60" id="r84-lO-hBR"/>
+                <constraint firstItem="zQ9-PG-hr1" firstAttribute="leading" secondItem="tFX-TW-zAc" secondAttribute="leading" constant="60" id="zsh-Qg-q7n"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="tFX-TW-zAc"/>
+            <point key="canvasLocation" x="139" y="137"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Pause" width="32" height="50"/>
+    </resources>
+</document>

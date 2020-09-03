@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CardDeckSelectViewController" customModule="Alias" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="8Tb-Gd-nbK" id="UQ9-qC-6Fq"/>
+                <outlet property="view" destination="wJT-ym-NPs" id="c7H-Nx-hRa"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="wJT-ym-NPs">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0sn-5A-1c1">
+                    <rect key="frame" x="10" y="64" width="394" height="718"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вибір набору слів" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QAK-dJ-R32">
+                            <rect key="frame" x="20" y="20" width="354" height="35.5"/>
+                            <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="25"/>
+                            <color key="textColor" red="0.93252450229999995" green="0.53559809920000001" blue="0.57565814260000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <collectionView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentInsetAdjustmentBehavior="never" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8Tb-Gd-nbK">
+                            <rect key="frame" x="20" y="75.5" width="354" height="622.5"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="fkd-Hm-ROl">
+                                <size key="itemSize" width="40" height="50"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                            <cells/>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="4Af-YU-SFP"/>
+                                <outlet property="delegate" destination="-1" id="CIe-B5-eDZ"/>
+                            </connections>
+                        </collectionView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="8Tb-Gd-nbK" secondAttribute="trailing" constant="20" id="4UR-CT-SB4"/>
+                        <constraint firstItem="QAK-dJ-R32" firstAttribute="top" secondItem="0sn-5A-1c1" secondAttribute="top" constant="20" id="GQL-bH-xaG"/>
+                        <constraint firstItem="8Tb-Gd-nbK" firstAttribute="leading" secondItem="0sn-5A-1c1" secondAttribute="leading" constant="20" id="VKE-Yc-D6q"/>
+                        <constraint firstAttribute="bottom" secondItem="8Tb-Gd-nbK" secondAttribute="bottom" constant="20" id="mBN-gB-Bxc"/>
+                        <constraint firstAttribute="trailing" secondItem="QAK-dJ-R32" secondAttribute="trailing" constant="20" id="nh0-16-cdp"/>
+                        <constraint firstItem="QAK-dJ-R32" firstAttribute="leading" secondItem="0sn-5A-1c1" secondAttribute="leading" constant="20" id="sSE-fy-WWj"/>
+                        <constraint firstItem="8Tb-Gd-nbK" firstAttribute="top" secondItem="QAK-dJ-R32" secondAttribute="bottom" constant="20" id="vWf-Mv-foc"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="MVn-Fx-d3k">
+                    <rect key="frame" x="10" y="792" width="394" height="50"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hC7-OT-BDu">
+                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                            <color key="backgroundColor" red="0.9738667607" green="0.82613641019999995" blue="0.71075886489999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="TKf-c9-7Jv"/>
+                                <constraint firstAttribute="width" secondItem="hC7-OT-BDu" secondAttribute="height" multiplier="1:1" id="Udf-zs-lD2"/>
+                            </constraints>
+                            <state key="normal" image="Cancel">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="cancelButtonTapped:" destination="-1" eventType="touchUpInside" id="tro-Er-ahM"/>
+                            </connections>
+                        </button>
+                        <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RPa-8j-dWb">
+                            <rect key="frame" x="55" y="0.0" width="339" height="50"/>
+                            <color key="backgroundColor" red="0.50989414190000004" green="0.90195900200000001" blue="0.81268352269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="z4t-sb-tVV"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="27"/>
+                            <state key="normal" title="Продовжити">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="continueButtonTapped:" destination="-1" eventType="touchUpInside" id="tsg-p4-Zxv"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="0.83359135809999996" green="0.89781232229999997" blue="0.7258330086" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="0sn-5A-1c1" firstAttribute="top" secondItem="sRF-vF-1hO" secondAttribute="top" constant="20" id="Dyi-f8-O3T"/>
+                <constraint firstItem="MVn-Fx-d3k" firstAttribute="leading" secondItem="sRF-vF-1hO" secondAttribute="leading" constant="10" id="SqS-Zq-Doi"/>
+                <constraint firstItem="sRF-vF-1hO" firstAttribute="trailing" secondItem="MVn-Fx-d3k" secondAttribute="trailing" constant="10" id="W1D-HB-OKH"/>
+                <constraint firstItem="0sn-5A-1c1" firstAttribute="leading" secondItem="sRF-vF-1hO" secondAttribute="leading" constant="10" id="bMh-RA-328"/>
+                <constraint firstItem="sRF-vF-1hO" firstAttribute="bottom" secondItem="MVn-Fx-d3k" secondAttribute="bottom" constant="20" id="evP-8U-H57"/>
+                <constraint firstItem="sRF-vF-1hO" firstAttribute="trailing" secondItem="0sn-5A-1c1" secondAttribute="trailing" constant="10" id="nJR-SG-xiw"/>
+                <constraint firstItem="MVn-Fx-d3k" firstAttribute="top" secondItem="0sn-5A-1c1" secondAttribute="bottom" constant="10" id="tgO-Ui-bq6"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="sRF-vF-1hO"/>
+            <point key="canvasLocation" x="139" y="142"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Cancel" width="27" height="27"/>
+    </resources>
+</document>

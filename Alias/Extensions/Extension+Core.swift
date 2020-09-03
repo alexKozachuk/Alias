@@ -288,3 +288,28 @@ extension UICollectionView {
         }
     }
 }
+
+extension UISegmentedControl {
+    func configure(with titles: [String], selected item: String) {
+        self.removeAllSegments()
+        
+        for item in titles.reversed() {
+            self.insertSegment(withTitle: item, at: 0, animated: false)
+        }
+        
+        
+        self.select(title: item)
+    }
+    
+    func select(title: String) {
+        let count = self.numberOfSegments
+        for index in 0..<count {
+            if let text = self.titleForSegment(at: index) {
+                if text == title {
+                    self.selectedSegmentIndex = index
+                    return
+                }
+            }
+        }
+    }
+}

@@ -18,7 +18,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         checkFirstRun()
-        guard let _ = (scene as? UIWindowScene) else { return }
+        
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+        window = UIWindow(frame: windowScene.coordinateSpace.bounds)
+        window?.windowScene = windowScene
+        let builder = ModuleBuilder()
+        let navigationController = UINavigationController()
+         navigationController.navigationBar.isHidden = true
+        let router = Router(navigationController: navigationController, assemblyBuilder: builder)
+        router.initialViewController()
+        
+        window?.rootViewController = navigationController
+        window?.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -90,13 +101,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             }
         }
         
-        
-        
-        
-        
-        
-        
-        
         for team in TeamStoarge.shared.teams {
             let item = Team()
             item.name = team.name
@@ -106,7 +110,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             item.points = 0
             CoreDataManager.share.saveContext()
         }
-        defaults.setInt(item: 60, key: .timeRound)
+        defaults.setInt(item: 10, key: .timeRound)
         defaults.setInt(item: 50, key: .winPoints)
         defaults.setBool(item: true, key: .firstRun)
         defaults.setBool(item: true, key: .penalty)
